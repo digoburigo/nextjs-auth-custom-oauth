@@ -3,6 +3,7 @@ import { Button } from "@acme/ui/button";
 
 export async function AuthShowcase() {
   const session = await auth();
+  console.log(`session:`, session);
 
   if (!session) {
     return (
@@ -11,10 +12,10 @@ export async function AuthShowcase() {
           size="lg"
           formAction={async () => {
             "use server";
-            await signIn("discord");
+            await signIn("foo");
           }}
         >
-          Sign in with Discord
+          Sign in with foo
         </Button>
       </form>
     );
@@ -23,7 +24,7 @@ export async function AuthShowcase() {
   return (
     <div className="flex flex-col items-center justify-center gap-4">
       <p className="text-center text-2xl">
-        {session && <span>Logged in as {session.user.name}</span>}
+        {session && <span>Logged in as {JSON.stringify(session)}</span>}
       </p>
 
       <form>

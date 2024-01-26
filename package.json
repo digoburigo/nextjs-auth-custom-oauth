@@ -18,7 +18,8 @@
     "lint:fix": "turbo lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
     "lint:ws": "pnpm dlx sherif@latest",
     "postinstall": "pnpm lint:ws",
-    "typecheck": "turbo typecheck"
+    "typecheck": "turbo typecheck",
+    "lib:new": "turbo gen"
   },
   "devDependencies": {
     "@acme/prettier-config": "workspace:^0.1.0",
@@ -30,7 +31,7 @@
   "prettier": "@acme/prettier-config",
   "pnpm": {
     "overrides": {
-      "@auth/core": "0.20.0"
+      "@auth/core": "0.23.0"
     }
   }
 }
