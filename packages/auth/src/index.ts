@@ -24,13 +24,13 @@ export const {
       id: "foo",
       name: "foo",
       type: "oidc",
-      wellKnown: `http://localhost:3002/.well-known/openid-configuration/`,
+      wellKnown: `http://localhost:3002/.well-known/openid-configuration`,
       issuer: `http://localhost:3002`,
-      userinfo: `http://localhost:3002/userinfo/`,
+      userinfo: `http://localhost:3002/userinfo`,
       jwks_endpoint: `http://localhost:3002/.well-known/jwks.json`,
-      token: `http://localhost:3002/token/`,
+      token: `http://localhost:3002/token`,
       authorization: {
-        url: `http://localhost:3002/authorize/`,
+        url: `http://localhost:3002/authorize`,
         params: { scope: "openid profile email" },
       },
       profile(profile, tokens) {
@@ -110,11 +110,11 @@ async function refreshAccessToken(token: JWT) {
     const params = new URLSearchParams({
       grant_type: "refresh_token",
       refresh_token: token.refresh_token,
-      client_id: process.env.DJANGO_OAUTH_CLIENT_ID!,
-      client_secret: process.env.DJANGO_OAUTH_CLIENT_SECRET!,
+      client_id: "foo",
+      client_secret: "bar",
     });
 
-    const response = await fetch(`${process.env.DJANGO_OAUTH_URL}/token/`, {
+    const response = await fetch(`http://localhost:3002/token`, {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",

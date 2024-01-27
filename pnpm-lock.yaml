@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@auth/core': 0.23.0
+  '@auth/core': 0.24.0
 
 importers:
 
@@ -30,8 +30,8 @@ importers:
   apps/auth-proxy:
     dependencies:
       '@auth/core':
-        specifier: 0.23.0
-        version: 0.23.0
+        specifier: 0.24.0
+        version: 0.24.0
     devDependencies:
       '@acme/eslint-config':
         specifier: workspace:^0.2.0
@@ -316,8 +316,8 @@ importers:
         specifier: ^14.0.4
         version: 14.0.4(react-dom@18.2.0)(react@18.2.0)
       next-auth:
-        specifier: 5.0.0-beta.4
-        version: 5.0.0-beta.4(next@14.0.4)(react@18.2.0)
+        specifier: 5.0.0-beta.5
+        version: 5.0.0-beta.5(next@14.0.4)(react@18.2.0)
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -624,8 +624,8 @@ packages:
       '@jridgewell/gen-mapping': 0.3.3
       '@jridgewell/trace-mapping': 0.3.18
 
-  /@auth/core@0.23.0:
-    resolution: {integrity: sha512-vReM7RIX4BDj/EKyM6OiYnEw4u0MOEC+c2tB7V0qoZy2JZ/hn1xEuDMJwmdcvZNCjQ6kp4cW/6eTcCcEDsRbEA==}
+  /@auth/core@0.24.0:
+    resolution: {integrity: sha512-wwTyapljg4ydyvtQRXSeOaj6nBVSvPkVoXws6i+/vPfINxz4lo9UuLifPLqW7iO72/f4Ttaez0g3XA42VtKQ8A==}
     peerDependencies:
       nodemailer: ^6.8.0
     peerDependenciesMeta:
@@ -644,7 +644,7 @@ packages:
   /@auth/drizzle-adapter@0.3.12:
     resolution: {integrity: sha512-6+XCHrDXglKPWKRmHuUA6f27WM40v3+MQyUFf2d+JsA0tuBuwOw6IPp1ycxvOODM6milHyKcjowUfqWW9F9f9Q==}
     dependencies:
-      '@auth/core': 0.23.0
+      '@auth/core': 0.24.0
     transitivePeerDependencies:
       - nodemailer
     dev: false
@@ -11439,8 +11439,8 @@ packages:
     engines: {node: '>= 0.4.0'}
     dev: true
 
-  /next-auth@5.0.0-beta.4(next@14.0.4)(react@18.2.0):
-    resolution: {integrity: sha512-vgocjvwPA8gxd/zrIP/vr9lJ/HeNe+C56lPP1D3sdyenHt8KncQV6ro7q0xCsDp1fcOKx7WAWVZH5o8aMxDzgw==}
+  /next-auth@5.0.0-beta.5(next@14.0.4)(react@18.2.0):
+    resolution: {integrity: sha512-tEYIPhm/i0byW4xf9Ldlsnh7ckBQfNvMjOA3B3eXQX9taAQWb8earravSn1fjk4fKfKvaOApFJkks0VeI7Vy/A==}
     peerDependencies:
       next: ^14
       nodemailer: ^6.6.5
@@ -11449,7 +11449,7 @@ packages:
       nodemailer:
         optional: true
     dependencies:
-      '@auth/core': 0.23.0
+      '@auth/core': 0.24.0
       next: 14.0.4(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
     dev: false
