@@ -1,21 +1,20 @@
 import { auth, signIn, signOut } from "@acme/auth";
-import { Button } from "@acme/ui/button";
 
 export async function AuthShowcase() {
   const session = await auth();
+  console.log(`CURRENT SESSION:`, session);
 
   if (!session) {
     return (
       <form>
-        <Button
-          size="lg"
+        <button
           formAction={async () => {
             "use server";
             await signIn("foo");
           }}
         >
           Sign in with foo
-        </Button>
+        </button>
       </form>
     );
   }
@@ -27,15 +26,14 @@ export async function AuthShowcase() {
       </p>
 
       <form>
-        <Button
-          size="lg"
+        <button
           formAction={async () => {
             "use server";
             await signOut();
           }}
         >
           Sign out
-        </Button>
+        </button>
       </form>
     </div>
   );
