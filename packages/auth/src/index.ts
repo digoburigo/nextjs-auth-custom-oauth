@@ -67,7 +67,6 @@ export const {
       // Initial login
       if (account) {
         console.log(`account:`, account);
-        console.log("LOGIN INICIAL");
 
         return {
           access_token: account.access_token,
@@ -94,7 +93,6 @@ export const {
         return token;
       }
 
-      console.log("EXPIROU ACCESS TOKEN");
       console.log(`Date.now():`, Math.round(Date.now() / 1000));
       console.log(`token.expires_at:`, token.expires_at);
       console.log("compare", Math.round(Date.now() / 1000) > token.expires_at);
