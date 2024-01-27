@@ -19,6 +19,13 @@ export const {
   signIn,
   signOut,
 } = NextAuth({
+  basePath: "/api/auth",
+  session: {
+    strategy: "jwt",
+  },
+  debug: true,
+  trustHost: true,
+  secret: process.env.AUTH_SECRET,
   providers: [
     {
       id: "foo",
