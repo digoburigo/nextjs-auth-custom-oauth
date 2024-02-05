@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@auth/core': 0.24.0
+  '@auth/core': 0.26.0
 
 importers:
 
@@ -118,8 +118,8 @@ importers:
         specifier: ^14.0.4
         version: 14.0.4(react-dom@18.2.0)(react@18.2.0)
       next-auth:
-        specifier: 5.0.0-beta.5
-        version: 5.0.0-beta.5(next@14.0.4)(react@18.2.0)
+        specifier: 5.0.0-beta.6
+        version: 5.0.0-beta.6(next@14.0.4)(react@18.2.0)
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -304,11 +304,14 @@ packages:
       '@jridgewell/trace-mapping': 0.3.18
     dev: false
 
-  /@auth/core@0.24.0:
-    resolution: {integrity: sha512-wwTyapljg4ydyvtQRXSeOaj6nBVSvPkVoXws6i+/vPfINxz4lo9UuLifPLqW7iO72/f4Ttaez0g3XA42VtKQ8A==}
+  /@auth/core@0.26.0:
+    resolution: {integrity: sha512-AcuOQZHVUJDIbP6l98GttJNlobo3dxFfUiUEzzESapJ5BxJM+k/Cez3heDkQFhDBeati+FDZpZb4aPtH+odNwA==}
     peerDependencies:
+      '@simplewebauthn/server': ^9.0.1
       nodemailer: ^6.8.0
     peerDependenciesMeta:
+      '@simplewebauthn/server':
+        optional: true
       nodemailer:
         optional: true
     dependencies:
@@ -3718,19 +3721,24 @@ packages:
     engines: {node: '>= 0.4.0'}
     dev: true
 
-  /next-auth@5.0.0-beta.5(next@14.0.4)(react@18.2.0):
-    resolution: {integrity: sha512-tEYIPhm/i0byW4xf9Ldlsnh7ckBQfNvMjOA3B3eXQX9taAQWb8earravSn1fjk4fKfKvaOApFJkks0VeI7Vy/A==}
+  /next-auth@5.0.0-beta.6(next@14.0.4)(react@18.2.0):
+    resolution: {integrity: sha512-knkj6sfl6NkoilOh886pdJAKWCcJyoEXhR8avqDKffRSK6cfyOdAoAyERMZK4uWS2MwnsuUqhSz0vhndM3ws8Q==}
     peerDependencies:
+      '@simplewebauthn/browser': v9.0.0
       next: ^14
       nodemailer: ^6.6.5
       react: ^18.2.0
     peerDependenciesMeta:
+      '@simplewebauthn/browser':
+        optional: true
       nodemailer:
         optional: true
     dependencies:
-      '@auth/core': 0.24.0
+      '@auth/core': 0.26.0
       next: 14.0.4(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
+    transitivePeerDependencies:
+      - '@simplewebauthn/server'
     dev: false
 
   /next@14.0.4(react-dom@18.2.0)(react@18.2.0):
